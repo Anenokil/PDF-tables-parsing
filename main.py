@@ -23,25 +23,13 @@ funcs = {
 }
 
 
-def run_all():
-    input_path = 'inputs/example.pdf'
-    output_dir = 'outputs'
-    #p1.main(input_path, os.path.join(output_dir, 'out_pdfminer.txt'))
-    #p2.main(input_path, os.path.join(output_dir, 'out_pdfplumber.txt'))
-    #p3.main(input_path, os.path.join(output_dir, 'out_pdfquery.txt'))
-    #p4.main(input_path, os.path.join(output_dir, 'out_pdftotree.txt'))
-    #p5.main(input_path, os.path.join(output_dir, 'out_pymupdf.txt'))
-    #p6.main(input_path, os.path.join(output_dir, 'out_pypdf2.txt'))
-    #p7.main(input_path, os.path.join(output_dir, 'out_tabula.txt'))
-
-
 def main():
     input_dir = 'inputs'
     output_dir = 'outputs'
     lib = 'camelot'
     func = funcs[lib]
-    #for fn in os.listdir(input_dir):
-    for fn in ['1_table_separated.pdf', '1_table_merged_cols.pdf']:
+    #for fn in ['1_table_separated.pdf', '1_table_merged_cols.pdf']:
+    for fn in os.listdir(input_dir):
         name, ext = os.path.splitext(fn)
         if ext == '.pdf':
             print(fn)
