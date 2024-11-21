@@ -23,10 +23,7 @@ funcs = {
 }
 
 
-def main():
-    input_dir = 'inputs'
-    output_dir = 'outputs'
-    lib = 'camelot'
+def main(lib: str, input_dir: str, output_dir: str):
     func = funcs[lib]
     #for fn in ['1_table_separated.pdf', '1_table_merged_cols.pdf']:
     for fn in os.listdir(input_dir):
@@ -37,4 +34,4 @@ def main():
             func(pdf_path, os.path.join(output_dir, f'out_{name}_{lib}.txt'))
 
 
-main()
+main('camelot', 'inputs', 'outputs')
